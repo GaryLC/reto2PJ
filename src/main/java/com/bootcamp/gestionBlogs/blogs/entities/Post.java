@@ -14,6 +14,9 @@ public class Post {
     private Date date;
     private String status;
     private String content;
+    @ManyToOne()
+    @JoinColumn(name = "comment_id")
+    private  Comment comment;
 
     public Long getId() {
         return id;
@@ -53,5 +56,13 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Comment getComment() {
+        return comment;
+    }
+
+    public void setComment(Comment comment) {
+        this.comment = comment;
     }
 }
