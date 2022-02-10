@@ -1,0 +1,1 @@
+INSERT INTO author (nombre,email,phone,birthDate) VALUES ( 'Percy Moran', 'percyM@gmail.com','950201191','11/12/87');
