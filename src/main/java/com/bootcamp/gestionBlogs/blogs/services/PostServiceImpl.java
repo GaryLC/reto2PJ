@@ -20,6 +20,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public String save(Post post) {
+
         if (post.getStatus().equals("publicado")) {
             postRepository.save(post);
             return "succes con comentario ,post en estado publicado";
