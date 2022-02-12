@@ -8,15 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="citas" />
+        <module name="reto2PJ" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="citas" target="11" />
+      <module name="reto2PJ" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="citas" options="-parameters" />
+      <module name="reto2PJ" options="-parameters" />
     </option>
   </component>
 </project>

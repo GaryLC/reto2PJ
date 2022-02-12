@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "e98eb357-9414-4ae8-bcd8-0b3d07ff8838",
+		"name": "Gestiondeblogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-01-30T11:00\",\r\n    \"name\": \"Alfredo\",\r\n    \"comment\": \"Excelente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/save/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"save",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"title\": \"Mi primer Post\",\r\n    \"status\": \"publicado\",\r\n    \"content\": \"Medicina General\",\r\n    \"comment\":{\r\n        \"id\":3\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/save/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"save",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveBlog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Mi primer Post\",\r\n    \"descripcion\": \"publicado\",\r\n    \"url\": \"Medicina General\",\r\n    \"status\": \"activo\",\r\n    \"author\": {\r\n        \"id\": 2\r\n    },\r\n    \"post\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/save/blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"save",
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAuthor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/listAuthor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"listAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listBlogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/listBlogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"listBlogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gestionBlogs/listPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gestionBlogs",
+						"listPost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

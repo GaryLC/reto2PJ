@@ -2,8 +2,10 @@ package com.bootcamp.gestionBlogs.blogs.entities;
 
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
+
 import lombok.*;
+
 
 @Getter
 @Setter
@@ -18,7 +20,8 @@ public class Post {
     @Column(unique = true , nullable = false)
     private Long id;
     private String title;
-    private Date date;
+    @Column(name="datepost")
+    private LocalDate datePost;
     private String status;
     private String content;
     @ManyToOne()

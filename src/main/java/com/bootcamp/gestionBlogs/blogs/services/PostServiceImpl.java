@@ -5,6 +5,8 @@ import com.bootcamp.gestionBlogs.blogs.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -20,15 +22,18 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public String save(Post post) {
+        var postExistfortoday = postRepository.isPostfortoday();
+        if (postExistfortoday != null) {
+            return "Solo puedes registrar un post por día ";
+        } else if (post.getStatus().equals("publicado")) {
 
-        if (post.getStatus().equals("publicado")) {
-            postRepository.save(post);
-            return "succes con comentario ,post en estado publicado";
+            post.setDatePost(LocalDate.now());
+            this.postRepository.save(post);
+            return "post registrado ";
         } else {
-            post.setStatus("borrador");
-            post.setComment(null);
-            postRepository.save(post);
-            return "succes sin comentario";
+            return "Solo se debe registrar comentarios a post en estado publicado ";
         }
+
     }
 }
+

@@ -17,12 +17,13 @@ public class Blog {
     @Column(unique = true, nullable = false)
     private Long id;
     private String nombre;
+    private String descripcion;
     @ManyToOne()
-    @JoinColumn(name = "autor_id")
-    private Author autor;
+    @JoinColumn(name = "author_id")
+    private Author author;
     @ManyToOne()
     @JoinColumn(name = "post_id")
     private Post post;
     private String url;
-    private Boolean status;
+    private String status;
 }

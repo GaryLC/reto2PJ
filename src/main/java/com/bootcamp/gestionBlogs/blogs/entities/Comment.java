@@ -20,6 +20,6 @@ public class Comment {
     private Long id;
     @Column(name = "datecomment")
     private Date dateComment;
-    private String nombre ;
-    private String estado ;
+    private String name ;
+    private String comment;
 }
